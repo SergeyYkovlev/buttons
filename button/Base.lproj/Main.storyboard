@@ -16,6 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="png" translatesAutoresizingMaskIntoConstraints="NO" id="Sbp-0h-BSp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-7n-n0O">
+                                <rect key="frame" x="173" y="504" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="goforward" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3c-pZ-2bC"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4bN-HF-nU7">
                                 <rect key="frame" x="20" y="431" width="310" height="34"/>
                                 <constraints>
@@ -40,27 +51,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Center text afdaf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyR-m9-ySJ">
-                                <rect key="frame" x="19" y="65" width="375" height="345"/>
+                                <rect key="frame" x="19" y="63" width="375" height="345"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhC-7n-n0O">
-                                <rect key="frame" x="173" y="504" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="buttonColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3c-pZ-2bC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PhC-7n-n0O" secondAttribute="trailing" constant="174" id="2FG-Us-ytC"/>
+                            <constraint firstAttribute="trailing" secondItem="Sbp-0h-BSp" secondAttribute="trailing" id="2Zg-R8-xvb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PhC-7n-n0O" secondAttribute="bottom" constant="327" id="Byd-Wc-3NO"/>
                             <constraint firstItem="4bN-HF-nU7" firstAttribute="top" secondItem="HyR-m9-ySJ" secondAttribute="bottom" constant="20" id="DHh-n9-8zT"/>
+                            <constraint firstItem="Sbp-0h-BSp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JO9-Cg-r5T"/>
                             <constraint firstItem="HyR-m9-ySJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NJg-7T-OkU"/>
+                            <constraint firstAttribute="bottom" secondItem="Sbp-0h-BSp" secondAttribute="bottom" id="ScV-sD-l8A"/>
+                            <constraint firstItem="Sbp-0h-BSp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a5w-rT-K3H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bUR-3B-UZX" secondAttribute="trailing" constant="20" id="a7b-L6-wSF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HyR-m9-ySJ" secondAttribute="trailing" constant="20" id="gn9-Qn-qMg"/>
                             <constraint firstItem="PhC-7n-n0O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="173" id="k9D-4e-4XZ"/>
@@ -73,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="image" destination="Sbp-0h-BSp" id="KQ2-K0-yzE"/>
                         <outlet property="result" destination="HyR-m9-ySJ" id="EW1-g6-vk0"/>
                         <outlet property="someTextField" destination="4bN-HF-nU7" id="cmu-ga-rR9"/>
                     </connections>
@@ -83,9 +91,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="goforward" catalog="system" width="121" height="128"/>
         <image name="play" catalog="system" width="120" height="128"/>
+        <image name="png" width="2870" height="4000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
