@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -104,11 +105,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="VVI-zk-Erh"/>
                         <segue destination="U7A-b1-W20" kind="relationship" relationship="viewControllers" id="bTG-LS-4qg"/>
+                        <segue destination="dmX-2n-UiG" kind="relationship" relationship="viewControllers" id="Abd-07-rcr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aj3-aC-gyC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="435.26785714285711"/>
+            <point key="canvasLocation" x="-209" y="591"/>
         </scene>
         <!--Фото-->
         <scene sceneID="UBL-Dq-akj">
@@ -189,7 +191,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NhE-KM-tJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934.78260869565224" y="863.83928571428567"/>
+            <point key="canvasLocation" x="928" y="743"/>
+        </scene>
+        <!--галерея-->
+        <scene sceneID="kEr-gY-fUY">
+            <objects>
+                <viewController id="dmX-2n-UiG" customClass="CollectionViewController" customModule="button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEG-CG-Koj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-4j-wcg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="1" green="0.32063813200000002" blue="0.35063383939999998" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fIa-Z4-SxN">
+                                    <size key="itemSize" width="277" height="311"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galery" id="fZc-mR-J7O" customClass="ViewControllerCollectionViewCell" customModule="button" customModuleProvider="target">
+                                        <rect key="frame" x="68.5" y="0.0" width="277" height="311"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="GNQ-Sg-CIU">
+                                            <rect key="frame" x="0.0" y="0.0" width="277" height="311"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TRM-mX-jG5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="277" height="311"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.43045623" green="1" blue="0.93519003020000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="277" height="311"/>
+                                        <connections>
+                                            <outlet property="miImage" destination="TRM-mX-jG5" id="Nn3-BN-M1S"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="dmX-2n-UiG" id="miw-3b-cVB"/>
+                                    <outlet property="delegate" destination="dmX-2n-UiG" id="lXY-41-ftX"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ttb-Gv-x3n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9MQ-4j-wcg" secondAttribute="bottom" id="QIL-In-2Ur"/>
+                            <constraint firstItem="9MQ-4j-wcg" firstAttribute="top" secondItem="pEG-CG-Koj" secondAttribute="top" id="oXp-TV-YL7"/>
+                            <constraint firstItem="9MQ-4j-wcg" firstAttribute="leading" secondItem="Ttb-Gv-x3n" secondAttribute="leading" id="rd1-cb-KHe"/>
+                            <constraint firstItem="9MQ-4j-wcg" firstAttribute="trailing" secondItem="Ttb-Gv-x3n" secondAttribute="trailing" id="yYw-gP-fWn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="галерея" image="square.grid.3x3.topmiddle.fill" catalog="system" id="piE-xX-dPJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kye-EQ-GEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="927.536231884058" y="1470.5357142857142"/>
         </scene>
     </scenes>
     <resources>
@@ -198,6 +259,7 @@
         <image name="play" catalog="system" width="120" height="128"/>
         <image name="png" width="2870" height="4000"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.grid.3x3.topmiddle.fill" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
