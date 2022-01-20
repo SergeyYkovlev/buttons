@@ -14,6 +14,7 @@
 		0C7B43B8279561B900A7AAAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C7B43B7279561B900A7AAAC /* Assets.xcassets */; };
 		0C7B43BB279561B900A7AAAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7B43B9279561B900A7AAAC /* LaunchScreen.storyboard */; };
 		0C7B43C72796D9E400A7AAAC /* TableVievController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B43C62796D9E300A7AAAC /* TableVievController.swift */; };
+		0CBBAF1527993A0200723957 /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBBAF1427993A0200723957 /* ViewControllerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0C7B43BA279561B900A7AAAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C7B43BC279561B900A7AAAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7B43C62796D9E300A7AAAC /* TableVievController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVievController.swift; sourceTree = "<group>"; };
+		0CBBAF1427993A0200723957 /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0C7B43B2279561B700A7AAAC /* ViewController.swift */,
 				0C7B43C62796D9E300A7AAAC /* TableVievController.swift */,
 				0C7B43B4279561B700A7AAAC /* Main.storyboard */,
+				0CBBAF1427993A0200723957 /* ViewControllerTableViewCell.swift */,
 				0C7B43B7279561B900A7AAAC /* Assets.xcassets */,
 				0C7B43B9279561B900A7AAAC /* LaunchScreen.storyboard */,
 				0C7B43BC279561B900A7AAAC /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				0C7B43B3279561B700A7AAAC /* ViewController.swift in Sources */,
 				0C7B43AF279561B700A7AAAC /* AppDelegate.swift in Sources */,
+				0CBBAF1527993A0200723957 /* ViewControllerTableViewCell.swift in Sources */,
 				0C7B43C72796D9E400A7AAAC /* TableVievController.swift in Sources */,
 				0C7B43B1279561B700A7AAAC /* SceneDelegate.swift in Sources */,
 			);
